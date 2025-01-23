@@ -28,7 +28,6 @@ export const login = (email, password) => async (dispatch) => {
     const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/auth/login`, { email, password });
     dispatch(loginSuccess(response.data));
   } catch (err) {
-    console.error('Login failed:', err.response?.data || err.message);
     alert('Invalid credentials. Please try again.');
   }
 };
@@ -38,7 +37,6 @@ export const register = (userData) => async () => {
     await axios.post(`${import.meta.env.VITE_BASE_URL}/auth/register`, userData);
     alert('Registration successful! You can now log in.');
   } catch (err) {
-    console.error('Registration failed:', err.response?.data || err.message);
     alert('Registration failed. Please try again.');
   }
 };

@@ -19,28 +19,22 @@ export const addProduct = createAsyncThunk('products/addProduct', async (product
   const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/products`, product, {
     headers: { Authorization: `Bearer ${token}` },
   });
-  console.log('Response from Add Product:', response.data);
   return response.data;
 });
 
 export const editProduct = createAsyncThunk('products/editProduct', async ({ id, updates }, { getState }) => {
   const { token } = getState().auth;
 
-  console.log('Editing Product ID:', id);
-  console.log('Updates:', updates);
 
   const response = await axios.put(`${import.meta.env.VITE_BASE_URL}/products/${id}`, updates, {
     headers: { Authorization: `Bearer ${token}` },
   });
-  console.log('Response from Edit Product:', response.data);
   return response.data;
 });
 
 export const deleteProduct = createAsyncThunk('products/deleteProduct', async (id, { getState }) => {
   const { token } = getState().auth;
 
-  console.log('Deleting Product ID:', id);
-  console.log('Authorization Token:', token);
 
   await axios.delete(`${import.meta.env.VITE_BASE_URL}/products/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
