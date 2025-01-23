@@ -11,7 +11,10 @@ const wishlistRoutes = require('./routes/wishlist');
 
 const app = express();
 
-app.use(cors());
+app.use(cors( {
+  origin: process.env.ORIGIN,
+  credentials: true,
+}));
 app.use(bodyParser.json());
 
 app.use('/api/auth', authRoutes);
