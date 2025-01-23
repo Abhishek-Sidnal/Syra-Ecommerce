@@ -12,7 +12,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="bg-darkBg text-darkText min-h-screen p-6">
+    <div className="bg-darkBg text-darkText min-h-screen p-6 flex flex-col w-full items-center ">
       <h2 className="text-2xl font-bold text-darkPrimary mb-6">Add New Product</h2>
       <ProductForm onSubmit={handleProductSubmit} />
     </div>
