@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
       <h3 className="font-bold text-lg text-darkPrimary mb-2">{product.name}</h3>
       <p className="text-sm md:text-base mb-2">{product.description}</p>
       <p className="font-semibold text-darkSecondary mt-2">
-        Price: <span className="text-white">${product.price}</span>
+        Price: <span className="text-white">₹ {product.price}</span>
       </p>
       <p className="text-sm text-gray-400 mt-1">Stock: {product.stock}</p>
       <p className="text-sm text-gray-400 mt-1">Category: {product.category}</p>

@@ -40,13 +40,13 @@ const CartPage = () => {
                       {item.productId.name}
                     </h3>
                     <p className="text-sm md:text-base mt-1">
-                      Price: <span className="font-semibold">${item.productId.price}</span>
+                      Price: <span className="font-semibold">₹ {item.productId.price}</span>
                     </p>
                     <p className="text-sm md:text-base mt-1">
                       Quantity: <span className="font-semibold">{item.quantity}</span>
                     </p>
                     <p className="text-sm md:text-base mt-1">
-                      Total: <span className="font-semibold">${item.productId.price * item.quantity}</span>
+                      Total: <span className="font-semibold">₹ {item.productId.price * item.quantity}</span>
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-0 sm:ml-4 flex sm:items-center">
@@ -63,7 +63,7 @@ const CartPage = () => {
           </ul>
           <div className="mt-6 text-right">
             <h3 className="text-xl font-bold text-darkPrimary">
-              Grand Total: $
+              Grand Total: ₹
               {items.reduce(
                 (total, item) => total + item.productId.price * item.quantity,
                 0

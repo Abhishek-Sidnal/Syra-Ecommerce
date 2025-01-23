@@ -66,7 +66,7 @@ const MyProducts = () => {
                                             {product.description}
                                         </p>
                                         <p className="text-sm md:text-base mt-1">
-                                            Price: <span className="font-semibold">${product.price}</span>
+                                            Price: <span className="font-semibold">₹ {product.price}</span>
                                         </p>
                                         <p className="text-sm md:text-base mt-1">
                                             Stock: <span className="font-semibold">{product.stock}</span>

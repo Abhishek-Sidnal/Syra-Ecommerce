@@ -30,7 +30,7 @@ const WishlistPage = () => {
                 <div>
                   <h3 className="font-bold text-lg text-darkPrimary">{item.name}</h3>
                   <p>{item.description}</p>
-                  <p>Price: ${item.price}</p>
+                  <p>Price: ₹ {item.price}</p>
                   <p>Category: {item.category}</p>
                 </div>
                 <button
